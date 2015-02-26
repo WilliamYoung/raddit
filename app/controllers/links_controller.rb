@@ -59,6 +59,19 @@ class LinksController < ApplicationController
     redirect_to links_path, notice: "Not authorized to edit this link" if @link.nil?
   end #authorized_user
 
+  def upvote
+    @link = Link.find params[:id]
+    @link.upvote_by current_user
+    redirect_to :back
+  end #upvote
+
+  def downvote
+    @link = Link.find params[:id]
+    @link.downvote_by current_user
+    redirect_to :back
+  end #downvote
+
+
   # DELETE /links/1
   # DELETE /links/1.json
   def destroy
