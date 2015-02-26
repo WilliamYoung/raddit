@@ -27,6 +27,7 @@ gem 'devise', '~> 3.4.0'
 
 gem 'bootstrap-sass'
 gem 'acts_as_votable'
+gem 'simple_form'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
